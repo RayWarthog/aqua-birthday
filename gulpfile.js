@@ -14,6 +14,8 @@ const fs = require('fs').promises;
 
 const countries = require("i18n-iso-countries");
 
+const imagemin = require('gulp-imagemin');
+
 function minifycss() {
     return src('src/*.css')
         .pipe(cleanCSS({
@@ -100,7 +102,7 @@ async function build_html() {
     return src('src/index.handlebars')
         .pipe(handlebars(template_data))
         .pipe(htmlmin(htmlminoptions))
-        .pipe(rename('index.html'))
+        .pipe(rename('index_dev.html'))
         .pipe(dest('.'));
 }
 
@@ -113,4 +115,15 @@ function minifyjs() {
         .pipe(dest('dist'))
 }
 
+function minifyimg() {
+    return src('src/img/*')
+        .pipe(imagemin([
+            imagemin.optipng({
+                interlaced: true
+            })
+        ]))
+        .pipe(dest('dist/img'))
+}
+
+exports.build_full = series(minifycss, build_html, minifyjs, minifyimg);
 exports.build = series(minifycss, build_html, minifyjs);
