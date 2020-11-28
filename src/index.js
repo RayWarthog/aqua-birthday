@@ -19,5 +19,7 @@ door.addEventListener("click", function() {
             mirror: true,
             once: false,
         });
+
+        new GreenAudioPlayer('#cover-audio-container');
     }, 1000);
 });
