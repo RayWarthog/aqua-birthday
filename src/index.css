@@ -1,13 +1,25 @@
+#bg-container {
+    width: 100vw;
+    height: 100vh;
+
+    /* -webkit-transform: translateZ(0);
+    transform: translateZ(0); */
+    z-index: -1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+}
+
 #bg {
     width: 96vw;
     height: 96vh;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: -1;
+    
     background-image: url('img/background.png');
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 2vh 2vw;
     border-radius: 15px;
 
     display: flex;
@@ -22,4 +34,69 @@
     border-radius: 15px;
     width: 95%;
     height: 95%;
+}
+
+#init-page {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #AC8367;
+}
+
+#door-frame {
+    background-image: url('img/door_frame.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    width: 100%;
+    height: 100%;
+}
+
+#door {
+    background-image: url('img/door.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 700px) {
+
+}
+
+@media (min-width: 700px) {
+
+}
+
+@media (min-width: 1000px) {
+    
+}
+
+@media (min-width: 1400px) {
+    
 }
