@@ -11,5 +11,13 @@ door.addEventListener("click", function() {
         init_page.style.display = 'none';
         content.style.display = "";
         white_full.style.opacity = 0;
+
+        AOS.init({
+            offset: 120,
+            delay: 50,
+            duration: 1000,
+            mirror: true,
+            once: false,
+        });
     }, 1000);
 });
