@@ -45,20 +45,82 @@ body {
     position: relative;
     overflow: hidden;
     background-color: #AC8367;
-
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#door-hint {
+    position: absolute;
+    left: 8%;
+    top: 39%;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes ldio-7p7zzvmvrrd {
+    0% {
+        top: 40px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 5px;
+        left: 5px;
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+    }
+}
+
+.ldio-7p7zzvmvrrd div {
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    opacity: 1;
+    border-radius: 50%;
+    animation: ldio-7p7zzvmvrrd 2.2222222222222223s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.ldio-7p7zzvmvrrd div:nth-child(1) {
+    border-color: #ffffff
+}
+
+.ldio-7p7zzvmvrrd div:nth-child(2) {
+    border-color: #f8f8f8;
+    animation-delay: -1.1111111111111112s;
+}
+
+.loadingio-spinner-ripple-3zk4unnnmgj {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+
+.ldio-7p7zzvmvrrd {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-7p7zzvmvrrd div {
+    box-sizing: content-box;
 }
 
 #door-container {
     /* background-color: #333; */
     position: relative;
     margin: 0 auto;
-
     width: 200px;
     height: 223px;
-
     /* If user resizes the screen */
     transition: all 0.5s ease-in-out;
 }
@@ -68,7 +130,6 @@ body {
     background-size: cover;
     width: 100%;
     height: 100%;
-
     position: absolute;
     z-index: 2;
     pointer-events: none;
@@ -91,10 +152,8 @@ body {
     transform-origin: right;
     /*Speed of the Door animation*/
     transition: all 0.5s ease-in-out;
-
     width: 149px;
     height: 184px;
-
     cursor: pointer;
 }
 
@@ -112,7 +171,6 @@ body {
     background-color: white;
     width: 100%;
     height: 100%;
-
     z-index: 3;
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
@@ -129,12 +187,9 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-
     font-size: 2em;
-
     padding-left: 5%;
     padding-right: 5%;
-
     color: white;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }
@@ -145,18 +200,14 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
     height: 15vh;
-
     margin-left: 5%;
     margin-right: 5%;
-
     background-color: white;
     border-style: solid;
     border-width: thick;
     border-color: #E987AC;
     border-radius: 25px;
-
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
@@ -164,7 +215,6 @@ body {
 #cover-video-container {
     display: flex;
     justify-content: center;
-
     max-width: 1280px;
     position: relative;
     left: 0;
@@ -198,7 +248,7 @@ body {
     display: none;
 }
 
-#birthday-msgs > .card-columns {
+#birthday-msgs>.card-columns {
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -210,7 +260,6 @@ body {
 .birthday-msg-card {
     padding: 10px;
     box-shadow: 5px 0px 20px -5px rgba(0, 0, 0, 0.75);
-
     border-style: solid;
     border-width: thick;
     border-color: #E987AC;
@@ -261,7 +310,6 @@ blockquote>p {
 #artbook-gallery {
     margin-left: 5%;
     margin-right: 5%;
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -271,7 +319,6 @@ blockquote>p {
     background-color: white;
     font-family: 'Patrick Hand', cursive;
     padding: 15px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -290,15 +337,17 @@ blockquote>p {
     #birthday-msgs .card-columns {
         column-count: 1;
     }
-
     #door-container {
         width: 200px;
         height: 223px;
     }
-
     #door, #door_back {
         width: 149px;
         height: 184px;
+    }
+    #door-hint {
+        left: 8%;
+        top: 39%;
     }
 }
 
@@ -307,16 +356,17 @@ blockquote>p {
         width: 650px;
         height: 725px;
     }
-
     #door, #door_back {
         width: 486px;
         height: 600px;
     }
-
+    #door-hint {
+        left: 24%;
+        top: 55%;
+    }
     #welcome-msg {
         font-size: 3em;
     }
-
     #birthday-msgs .card-columns {
         column-count: 2;
     }
@@ -326,15 +376,17 @@ blockquote>p {
     #birthday-msgs .card-columns {
         column-count: 3;
     }
-
     #door-container {
         width: 871px;
         height: 972px;
     }
-
     #door, #door_back {
         width: 651px;
         height: 804px;
+    }
+    #door-hint {
+        left: 27%;
+        top: 57%;
     }
 }
 
