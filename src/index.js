@@ -12,15 +12,23 @@ door.addEventListener("click", function() {
         init_page.style.display = 'none';
         content.style.display = "";
         white_full.style.opacity = 0;
-
-        AOS.init({
-            offset: 120,
-            delay: 50,
-            duration: 1000,
-            mirror: true,
-            once: false,
-        });
+        init();
     }, 1000);
 });
 
-new GreenAudioPlayer('#cover-audio-container');
+function init() {
+    AOS.init({
+        offset: 120,
+        delay: 50,
+        duration: 1000,
+        mirror: true,
+        once: false,
+    });
+
+    new GreenAudioPlayer('#cover-audio-container');
+
+    let gallery = new SimpleLightbox('#artbook-gallery a');
+    gallery.on('error.simplelightbox', function (e) {
+        console.log(e); // some usefull information
+    });
+}

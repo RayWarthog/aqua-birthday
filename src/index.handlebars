@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
         integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.css"
+        integrity="sha512-FHwwMXxhAWjVhJyEgmmPg/aJ3BRmsOavHBV6yMK55Mz0rycBZcRmSowqij+ncd/JPtOzmUMZx7ZIRnGyqIE/1A=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="dist/index.css">
 
 <body>
@@ -68,7 +71,7 @@
         <section id="cover-video">
             <div class="sect-title" data-aos="fade-in">
                 <h1>Cover Mix (Video)</h1>
-                <h3 lang="ja">カバー曲</h3>
+                <h3 lang="ja">カバー曲（ビデオ）</h3>
             </div>
             <div id="cover-video-container" data-aos="fade-in">
                 <div class="video-container">
@@ -138,10 +141,33 @@
             </div>
         </section>
 
+        <section id="artbook">
+            <div class="sect-title" data-aos="fade-in">
+                <h1>Artbook</h1>
+                <h3 lang="ja">画集</h3>
+            </div>
+            <div id="artbook-gallery">
+                {{#each artbook_data}}
+                <a href="{{fullpage}}" data-aos="fade-in">
+                    <img srcset="{{thumbnail_small}} 200w,
+                                 {{thumbnail}} 500w"
+                         sizes="(max-width: 700px) 200px,
+                                500px"
+                        src="{{thumbnail}}"
+                        alt=""
+                        title="" />
+                </a>
+                {{/each}}
+            </div>
+        </section>
+
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"
+        integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg=="
+        crossorigin="anonymous"></script>
     <script src="dist/index.js"></script>
 </body>
 
