@@ -34,7 +34,7 @@ async function build_html() {
         record => {
             let timestamp = record[0];
             let username = record[1].trim();
-            let twitter = record[2].trim();
+            let twitter = record[3].trim();
             let country = record[4];
             let message = record[5];
             let message_jp = record[8];
