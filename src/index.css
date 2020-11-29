@@ -194,6 +194,40 @@ body {
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }
 
+#scroll-arrow-hint span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-bottom: 5px solid #06A8FF;
+    border-right: 5px solid #06A8FF;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scrolldown 2s infinite;
+    animation-delay: -0.2s;
+}
+
+#scroll-arrow-hint span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+#scroll-arrow-hint span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
 .sect-title {
     color: black;
     display: flex;
