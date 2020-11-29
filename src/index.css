@@ -297,13 +297,19 @@ blockquote>p {
     background-color: white;
     font-family: 'Patrick Hand', cursive;
     padding: 15px;
-}
-#credits .card {
-    border-style: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #credits p {
     margin-bottom: 0;
+}
+
+.credits-section {
+    padding: 15px;
 }
 
 @media (min-width: 1000px) {
