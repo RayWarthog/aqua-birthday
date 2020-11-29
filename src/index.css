@@ -267,32 +267,6 @@ blockquote>p {
     flex-wrap: wrap;
 }
 
-@media (max-width: 700px) {
-    #birthday-msgs .card-columns {
-        column-count: 1;
-    }
-}
-
-@media (min-width: 700px) {
-    #door-container {
-        width: 580px;
-        height: 648px;
-    }
-
-    #door, #door_back {
-        width: 434px;
-        height: 536px;
-    }
-
-    #welcome-msg {
-        font-size: 3em;
-    }
-
-    #birthday-msgs .card-columns {
-        column-count: 2;
-    }
-}
-
 #credits {
     background-color: white;
     font-family: 'Patrick Hand', cursive;
@@ -312,7 +286,47 @@ blockquote>p {
     padding: 15px;
 }
 
+@media (max-width: 700px) {
+    #birthday-msgs .card-columns {
+        column-count: 1;
+    }
+
+    #door-container {
+        width: 200px;
+        height: 223px;
+    }
+
+    #door, #door_back {
+        width: 149px;
+        height: 184px;
+    }
+}
+
+@media (min-width: 700px) {
+    #door-container {
+        width: 650px;
+        height: 725px;
+    }
+
+    #door, #door_back {
+        width: 486px;
+        height: 600px;
+    }
+
+    #welcome-msg {
+        font-size: 3em;
+    }
+
+    #birthday-msgs .card-columns {
+        column-count: 2;
+    }
+}
+
 @media (min-width: 1000px) {
+    #birthday-msgs .card-columns {
+        column-count: 3;
+    }
+
     #door-container {
         width: 871px;
         height: 972px;
@@ -321,10 +335,6 @@ blockquote>p {
     #door, #door_back {
         width: 651px;
         height: 804px;
-    }
-
-    #birthday-msgs .card-columns {
-        column-count: 3;
     }
 }
 
