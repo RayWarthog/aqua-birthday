@@ -233,7 +233,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 15vh;
+    min-height: 15vh;
     margin-left: 5%;
     margin-right: 5%;
     background-color: white;
