@@ -203,7 +203,6 @@ body {
     transform: rotate(45deg);
     margin: -10px;
     animation: scrolldown 2s infinite;
-    animation-delay: -0.2s;
 }
 
 #scroll-arrow-hint span:nth-child(2) {
