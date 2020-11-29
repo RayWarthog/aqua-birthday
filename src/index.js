@@ -1,6 +1,7 @@
 var door = document.querySelector("#door");
 door.addEventListener("click", function() {
     door.classList.add('open');
+    door.onclick = null;
 
     var white_full = document.querySelector("#white-full");
     var init_page = document.querySelector('#init-page');
@@ -19,7 +20,7 @@ door.addEventListener("click", function() {
             mirror: true,
             once: false,
         });
-
-        new GreenAudioPlayer('#cover-audio-container');
     }, 1000);
 });
+
+new GreenAudioPlayer('#cover-audio-container');

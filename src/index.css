@@ -137,7 +137,7 @@ body {
     flex-direction: column;
     text-align: center;
 
-    font-size: 3em;
+    font-size: 2em;
 
     color: white;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
@@ -165,13 +165,19 @@ body {
 #cover-video-container {
     display: flex;
     justify-content: center;
+
+    max-width: 1280px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .video-container {
     overflow: hidden;
     position: relative;
     width: 100%;
-    max-width: 1280px;
     height: 0;
     padding-bottom: 56.25%;
 }
@@ -192,6 +198,68 @@ body {
     display: none;
 }
 
+.birthday-msg-card-container {
+    margin-bottom: 10px;
+}
+
+.birthday-msg-card {
+    padding: 10px;
+    box-shadow: 5px 0px 20px -5px rgba(0, 0, 0, 0.75);
+
+    border-style: solid;
+    border-width: thick;
+    border-color: #E987AC;
+    border-radius: 25px;
+}
+
+.birthday-msg p {
+    white-space: pre-wrap;
+}
+
+blockquote>p {
+    font-family: 'Architects Daughter', cursive;
+}
+
+.sender-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sender-name-container {
+    flex: 1;
+    min-width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.sender-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.twitter-name {
+    font-size: 1rem;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flag-icon {
+    font-size: 1.75rem;
+    box-shadow: 0 0 5px black;
+}
+
+@media (max-width: 700px) {
+    #birthday-msgs .card-columns {
+        column-count: 1;
+    }
+}
+
 @media (min-width: 700px) {
     #door-container {
         width: 580px;
@@ -201,6 +269,14 @@ body {
     #door, #door_back {
         width: 434px;
         height: 536px;
+    }
+
+    #welcome-msg {
+        font-size: 3em;
+    }
+
+    #birthday-msgs .card-columns {
+        column-count: 2;
     }
 }
 
@@ -214,6 +290,14 @@ body {
         width: 651px;
         height: 804px;
     }
+
+    #birthday-msgs .card-columns {
+        column-count: 3;
+    }
 }
 
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+    #credits .card-columns {
+        column-count: 4;
+    }
+}

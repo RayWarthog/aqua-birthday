@@ -37,7 +37,11 @@
         href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kosugi+Maru&family=Patrick+Hand&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+        integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="dist/index.css">
 
 <body>
@@ -81,14 +85,59 @@
                 <h3 lang="ja">カバー曲</h3>
             </div>
             <div id="cover-audio-container" data-aos="fade-in">
-                 <audio controls>
+                <audio controls>
                     <source src="audio/Blessing_resistance.webm" type="audio/webm">
                     <source src="audio/Blessing_resistance.ogg" type="audio/ogg">
                     <source src="audio/Blessing_resistance.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
-                </audio> 
+                </audio>
             </div>
         </section>
+
+        <section id="birthday-msgs">
+            <div class="sect-title" data-aos="fade-in">
+                <h1>Messages</h1>
+                <h3 lang="ja">寄せ書きメッセージ</h3>
+            </div>
+            <div class="card-columns">
+                {{#each messages}}
+                <div class="birthday-msg-card-container" data-aos="fade-in">
+                    <div class="birthday-msg-card card card-default">
+                        <div class="sender-details">
+                            <div class="sender-name-container">
+                                <span class="sender-name">{{username}}</span>
+                                {{#with twitter}}
+                                <span class="twitter-name text-muted">@{{this}}</span>
+                                {{/with}}
+                            </div>
+                            <div>
+                                {{#if country_code}}
+                                <span class="flag-icon flag-icon-{{country_code}}" title="{{country_name}}"
+                                    alt="{{country_name}}"></span>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="birthday-msg">
+                            <blockquote class="blockquote mb-0" {{#if isMsgInJP}}lang="ja" {{/if}}>
+                                <!-- htmlmin:ignore -->
+                                <p>{{message}}</p>
+                                <!-- htmlmin:ignore -->
+                            </blockquote>
+                            {{#if message_jp}}
+                            <hr>
+                            <blockquote class="blockquote mb-0" lang="ja">
+                                <!-- htmlmin:ignore -->
+                                <p>{{message_jp}}</p>
+                                <!-- htmlmin:ignore -->
+                            </blockquote>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
