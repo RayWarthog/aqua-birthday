@@ -118,8 +118,8 @@ body {
     pointer-events: none;
 }
 
-#content {
-    padding-bottom: 50vh;
+.placeholder {
+    height: 50vh;
 }
 
 #welcome-msg {
@@ -291,6 +291,19 @@ blockquote>p {
     #birthday-msgs .card-columns {
         column-count: 2;
     }
+}
+
+#credits {
+    background-color: white;
+    font-family: 'Patrick Hand', cursive;
+    padding: 15px;
+}
+#credits .card {
+    border-style: none;
+}
+
+#credits p {
+    margin-bottom: 0;
 }
 
 @media (min-width: 1000px) {
