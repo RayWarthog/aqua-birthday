@@ -1,7 +1,22 @@
 var door = document.querySelector("#door");
+var door_back = document.querySelector("#door_back");
 door.addEventListener("click", function() {
+    open_door();
+});
+door_back.addEventListener("click", function() {
+    open_door();
+});
+
+var door_opened = false;
+
+function open_door() {
+    var door = document.querySelector("#door");
     door.classList.add('open');
-    door.onclick = null;
+
+    if (door_opened) {
+        return;
+    }
+    door_opened = true;
 
     var white_full = document.querySelector("#white-full");
     var init_page = document.querySelector('#init-page');
@@ -14,7 +29,7 @@ door.addEventListener("click", function() {
         white_full.style.opacity = 0;
         init();
     }, 1000);
-});
+}
 
 function init() {
     AOS.init({

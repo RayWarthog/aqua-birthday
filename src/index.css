@@ -157,6 +157,10 @@ body {
     cursor: pointer;
 }
 
+#door_back:hover ~ #door:not(.open) {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-15deg);
+}
+
 #door:hover:not(.open) {
     transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-15deg);
 }
