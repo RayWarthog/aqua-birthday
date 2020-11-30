@@ -117,7 +117,7 @@
             <div class="card-columns">
                 {{#each messages}}
                 <div class="birthday-msg-card-container" data-aos="fade-up">
-                    <div class="birthday-msg-card card card-default">
+                    <div class="birthday-msg-card card">
                         <div class="msg-deco"></div>
                         <div class="sender-details">
                             <div class="sender-name-container">
@@ -163,7 +163,7 @@
             <div id="artbook-gallery">
                 {{#each artbook_data}}
                 <a href="{{fullpage}}" data-aos="fade-up">
-                    <img srcset="{{thumbnail_small}} 150w,
+                    <img class="artbook-page" srcset="{{thumbnail_small}} 150w,
                                  {{thumbnail}} 500w" sizes="(max-width: 700px) 150px,
                                 500px" src="{{thumbnail}}" alt="" title="" />
                 </a>
@@ -288,6 +288,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"
         integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg=="
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="dist/index.js"></script>
 </body>
 

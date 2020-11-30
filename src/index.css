@@ -385,10 +385,6 @@ blockquote>p {
     background-color: white;
     font-family: 'Patrick Hand', cursive;
     padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 #credits p {
@@ -456,8 +452,4 @@ blockquote>p {
     }
 }
 
-@media (min-width: 1400px) {
-    #credits .card-columns {
-        column-count: 4;
-    }
-}
+@media (min-width: 1400px) {}
