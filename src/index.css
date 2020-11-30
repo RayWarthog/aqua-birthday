@@ -243,6 +243,22 @@ body {
     border-radius: 25px;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    text-align: center;
+
+    text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+
+.sect-title-deco {
+    background-image: url('img/aqua_chibi_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 4rem;
+    height: 7rem;
+    position: absolute;
+    z-index: -1;
+    right: 9px;
+    bottom: -3px;
 }
 
 #cover-video-container {
@@ -284,6 +300,7 @@ body {
 #birthday-msgs>.card-columns {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 7vh;
 }
 
 .birthday-msg-card-container {
@@ -299,12 +316,28 @@ body {
     border-radius: 25px;
 }
 
+.birthday-msg-card.card {
+    margin-bottom: 3.7rem;
+}
+
 .birthday-msg p {
     white-space: pre-wrap;
 }
 
 blockquote>p {
     font-family: 'Architects Daughter', cursive;
+}
+
+.msg-deco {
+    background-image: url('img/aqua_chibi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 5rem;
+    height: 4rem;
+    position: absolute;
+    top: -52px;
+    left: 0;
 }
 
 .sender-details {
