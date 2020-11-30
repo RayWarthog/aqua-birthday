@@ -176,6 +176,10 @@ body {
     pointer-events: none;
 }
 
+.placeholder-small {
+    height: 25vh;
+}
+
 .placeholder {
     height: 50vh;
 }

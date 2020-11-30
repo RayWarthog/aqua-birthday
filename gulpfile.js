@@ -192,7 +192,7 @@ async function build_html() {
     return src('src/index.handlebars')
         .pipe(handlebars(template_data))
         .pipe(htmlmin(htmlminoptions))
-        .pipe(rename('index_dev.html'))
+        .pipe(rename('index.html'))
         .pipe(dest('.'));
 }
 
