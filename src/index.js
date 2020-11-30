@@ -18,7 +18,6 @@ door.addEventListener("click", function() {
 
 function init() {
     AOS.init({
-        offset: 120,
         delay: 50,
         duration: 1000,
         mirror: true,
