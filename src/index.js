@@ -45,7 +45,7 @@ function init() {
         columnWidth: 300
     });
 
-    new GreenAudioPlayer('#cover-audio-container');
+    // new GreenAudioPlayer('#cover-audio-container');
 
     let gallery_a = new SimpleLightbox('#artbook-gallery a');
     gallery_a.on('error.simplelightbox', function (e) {

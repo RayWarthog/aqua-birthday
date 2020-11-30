@@ -180,10 +180,6 @@ body {
     pointer-events: none;
 }
 
-.placeholder-small {
-    height: 25vh;
-}
-
 .placeholder {
     height: 50vh;
 }
@@ -296,14 +292,14 @@ body {
     height: 100%;
 }
 
-#cover-audio-container {
+/* #cover-audio-container {
     width: 88%;
     margin-left: 5%;
 }
 
 #cover-audio-container audio {
     display: none;
-}
+} */
 
 #birthday-msgs>.card-columns {
     margin-left: 5%;
